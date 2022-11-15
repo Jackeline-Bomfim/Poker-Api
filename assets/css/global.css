@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #f6f8fc;    
 }
 
 .content {
@@ -12,6 +12,12 @@ body {
     height: 100vh;
     padding: 1rem;
     background-color: #fff;    
+}
+
+.image #imagem-principal {
+    display: block;
+    margin: 10px auto;
+    max-width: 280px;
 }
 
 @media screen and (min-width: 992px) {
@@ -22,4 +28,12 @@ body {
         border-radius: 1rem;
     }
 }
+
+@media screen and (min-width: 380px) {
+    .image #imagem-principal {
+        max-width: 100%;
+    }
+}
+
+
 
