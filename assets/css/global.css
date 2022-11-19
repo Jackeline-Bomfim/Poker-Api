@@ -35,5 +35,14 @@ body {
     }
 }
 
+/* About */
+
+.content-detail {
+    max-width: 500px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 20px;
+} 
+
 
 

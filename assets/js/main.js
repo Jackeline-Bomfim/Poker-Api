@@ -23,28 +23,6 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
-function convertDetailDosPokemons(pokemon) {
-    return `
-        <div class="detalhePokemon ${pokemon.type}">
-            <div class="imagemPokemon">
-                <img src="${pokemon.photo}"
-                alt="${pokemon.name}">
-                <span class="detalheNumero">#${pokemon.number}</span>
-                <span class="detalheNome">${pokemon.name}</span>
-            </div>
-
-            <div class="sobrePokemon">
-                <p>Types</p>
-                <div class="tipos-listas">
-                    <ol class="tipos">
-                        ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                    </ol>   
-                </div>             
-            </div>           
-        </div>
-    `
-}
-
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map(convertPokemonToLi).join('')
