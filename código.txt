@@ -1,0 +1,39 @@
+function convertPokemonToAbout(pokemon) {
+    return `
+        <div class="card_first">
+            <div class="card__photo">
+                <h3>${pokemon.name}r</h3>
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
+            </div>
+            <div class="card_types">
+                <ul class="types list">
+                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+
+        <div class="card_second">
+            <ul class="caracter list">
+                <li>
+                    <span>Height:</span>
+                    <strong>${pokemon.height}</strong>
+                </li>
+                <li>
+                    <span>Weight:</span>
+                    <strong>${pokemon.weight}</strong>
+                </li>
+            </ul>
+        </div>
+
+        <div class="abilities">
+            <ul class="ability list">
+                <span>Abilities:</span>
+                ${pokemon.abilities.map((ability) => `<li ${ability}">${ability}</li>`).join('')}            
+            </ul>
+        </div>
+
+        <div class="number">
+             <h3>#${pokemon.number}</h3>
+        </div>
+    `
+}
