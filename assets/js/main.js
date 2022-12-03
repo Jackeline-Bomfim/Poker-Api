@@ -16,13 +16,12 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <a href="./about.html" id="${pokemon.number}"><img src="${pokemon.photo}"
+                alt="${pokemon.name}"></a>
             </div>
         </li>
     `
 }
-
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -47,8 +46,3 @@ loadMoreButton.addEventListener('click', () => {
     }
 })
 
-document.querySelectorAll("a").forEach( function(a){
-    a.addEventListener("click", function(event){
-        
-    })
-})
