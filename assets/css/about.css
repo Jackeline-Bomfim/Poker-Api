@@ -167,3 +167,8 @@ button {
 button:active {
     transform: translateY(1px)
 }
+
+a > button#about {
+    cursor: pointer;
+    border: none;
+}
