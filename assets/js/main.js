@@ -47,44 +47,4 @@ loadMoreButton.addEventListener('click', () => {
 })
 
 
-var img = window.document.getElementById(`${pokemon.photo}`)
-var about = window.document.getElementsByClassName('container')
 
-function clicar() {
-    about.innerHTML = `
-        <div class="card_first">
-            <div class="card__photo">
-                <h3>${pokemon.name}</h3>
-                <img src="${pokemon.photo}" alt="${pokemon.name}">
-            </div>
-            <div class="card_types">
-                ol class="types">
-                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                 </ol>
-            </div>
-        </div>
-
-        <div class="card_second">
-            <ul class="caracter list">
-                <li>
-                    <span>Height:</span>
-                    <strong>${pokemon.height}</strong>
-                </li>
-                <li>
-                    <span>Weight:</span>
-                    <strong>${pokemon.weight}Kg</strong>
-                </li>
-            </ul>
-        </div>
-
-        <div class="number">
-            <h3>#${pokemon.number}</h3>
-        </div>
-
-        <div class="comeback">
-            <a href="/index.html">
-                 <button>Voltar</button>
-            </a>
-        </div>
-    `
-}
